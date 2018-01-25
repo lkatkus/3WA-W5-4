@@ -25,7 +25,9 @@
                         <div class="form-group">
                             <select class="form-control" name="lang">
                                 <option value="lt-en">Lithuanian to English</option>
-                                <option value="en-lt">English to Lithuanian</option>
+                                <option value="lt-ru">Lithuanian to Russian</option>
+                                <option value="lt-pl">Lithuanian to Polish</option>
+                                <!-- <option value="en-lt">English to Lithuanian</option> -->
                             </select>
                         </div>
                         <button type="submit" name="button">Search</button>

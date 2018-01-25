@@ -9,4 +9,12 @@
         'zuikis'=>'rabbit'
     ];
 
+    $dic2 = [
+        'labas'=>[
+            'en'=>'hello',
+            'ru'=>'zdrastvuj',
+            'pl'=>'dzendobre'
+        ]
+    ];
+
  ?>
