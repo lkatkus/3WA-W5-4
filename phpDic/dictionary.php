@@ -10,11 +10,17 @@
     ];
 
     $dic2 = [
-        'labas'=>[
+        'labas'=> [
             'en'=>'hello',
             'ru'=>'zdrastvuj',
             'pl'=>'dzendobre'
+        ],
+        'namas'=> [
+            'en'=>'house',
+            'ru'=>'dom',
+            'pl'=>'sklep'
         ]
     ];
+
 
  ?>

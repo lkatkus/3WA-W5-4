@@ -23,10 +23,18 @@
                             <input type="text" class="form-control" name="searchKey" placeholder="Enter word">
                         </div>
                         <div class="form-group">
-                            <select class="form-control" name="lang">
-                                <option value="lt-en">Lithuanian to English</option>
-                                <option value="lt-ru">Lithuanian to Russian</option>
-                                <option value="lt-pl">Lithuanian to Polish</option>
+                            <select class="form-control" name="langFrom">
+                                <option value="lt">From Lithuanian</option>
+                                <option value="en">From English</option>
+                                <option value="ru">From Russian</option>
+                                <option value="pl">From Polish</option>
+                                <!-- <option value="en-lt">English to Lithuanian</option> -->
+                            </select>
+                            <select class="form-control" name="langTo">
+                                <option value="lt">To Lithuanian</option>
+                                <option value="en">To English</option>
+                                <option value="ru">To Russian</option>
+                                <option value="pl">To Polish</option>
                                 <!-- <option value="en-lt">English to Lithuanian</option> -->
                             </select>
                         </div>
@@ -41,7 +49,8 @@
                     if($key==null){
                         if(array_key_exists('searchKey',$_GET)){
                             $key=$_GET['searchKey'];
-                            $lang=$_GET['lang'];
+                            $langFrom=$_GET['langFrom'];
+                            $langTo=$_GET['langTo'];
                         }
                     }else{
                         search($key, $lang);
@@ -59,7 +68,7 @@
                     ?>
 
                     <?php if($key):?>
-                        <?php search($key, $lang);?>
+                        <?php search($key, $langFrom, $langTo);?>
                     <?php endif;?>
 
                 </div>
