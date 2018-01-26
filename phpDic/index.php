@@ -17,28 +17,36 @@
             </div>
 
             <div class="row py-3">
-                <div class="col-6">
+                <div class="col-6 px-0">
                     <form action="index.php" method="get">
                         <div class="form-group">
                             <input type="text" class="form-control" name="searchKey" placeholder="Enter word">
                         </div>
-                        <div class="form-group">
-                            <select class="form-control" name="langFrom">
-                                <option value="lt">From Lithuanian</option>
-                                <option value="en">From English</option>
-                                <option value="ru">From Russian</option>
-                                <option value="pl">From Polish</option>
-                                <!-- <option value="en-lt">English to Lithuanian</option> -->
-                            </select>
-                            <select class="form-control" name="langTo">
-                                <option value="lt">To Lithuanian</option>
-                                <option value="en">To English</option>
-                                <option value="ru">To Russian</option>
-                                <option value="pl">To Polish</option>
-                                <!-- <option value="en-lt">English to Lithuanian</option> -->
-                            </select>
+                        <div class="row">
+                            <div class="col-6">
+                                <select class="form-control" name="langFrom">
+                                    <option value="lt">From Lithuanian</option>
+                                    <option value="en">From English</option>
+                                    <option value="ru">From Russian</option>
+                                    <option value="pl">From Polish</option>
+                                    <!-- <option value="en-lt">English to Lithuanian</option> -->
+                                </select>
+
+                            </div>
+                            <div class="col-6">
+                                <select class="form-control" name="langTo">
+                                    <option value="lt">To Lithuanian</option>
+                                    <option value="en">To English</option>
+                                    <option value="ru">To Russian</option>
+                                    <option value="pl">To Polish</option>
+                                    <!-- <option value="en-lt">English to Lithuanian</option> -->
+                                </select>
+                            </div>
                         </div>
-                        <button type="submit" name="button">Search</button>
+
+                        <div class="py-3">
+                            <button type="submit" name="button">Search</button>
+                        </div>
                     </form>
                 </div>
 
@@ -56,15 +64,6 @@
                         search($key, $lang);
                     }
 
-                    ?>
-
-
-                    <?php
-                        $key=null;
-                        if(array_key_exists('searchKey',$_GET)){
-                            $key=$_GET['searchKey'];
-                            $lang=$_GET['lang'];
-                        }
                     ?>
 
                     <?php if($key):?>

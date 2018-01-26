@@ -94,6 +94,19 @@
         //     };
         // };
 
+
+        function checkLang($lg){
+            if($lg = 'lt'){
+                return 'Lithuanian';
+            }elseif($lg = 'en'){
+                return 'English';
+            }elseif($lg = 'ru'){
+                return 'Russian';
+            }elseif($lg = 'pl'){
+                return 'Polish';
+            }
+        }
+
         if(array_key_exists($key,$dic2)){
             echo $dic2[$key][$langTo];
         }else{
@@ -101,18 +114,21 @@
             foreach ($dic2 as $i){
                 foreach ($i as $j){
                     if($key == $j){
-                        $mainKey = $i; /* MAIN ARRAY FOR WORD; */
+                        $mainKey = $i; /* MAIN ARRAY FOR SEARCHED WORD; */
                         $langEnter = array_search($key,$i); /* LANGUAGE OF ENTERED WORD */
                     }
                 };
             };
+
             if($langTo == 'lt'){
                 echo array_search($mainKey,$dic2);
             }else{
-                echo $dic2[$mainKey][$langTo]; /* NOT WORKING... */
-                echo $mainKey[$langTo];
+                echo 'illegal offset '.$dic2[$mainKey][$langTo]; /* NOT WORKING... */
+                echo '<br>Your entered a word in '.$langEnter;
+                echo '<br>'.$mainKey[$langTo];
             }
         };
+
     };
 
 ?>

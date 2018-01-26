@@ -11,11 +11,13 @@
 
     $dic2 = [
         'labas'=> [
+            // 'lt'=>'labas',
             'en'=>'hello',
             'ru'=>'zdrastvuj',
             'pl'=>'dzendobre'
         ],
         'namas'=> [
+            // 'lt'=>'namas',
             'en'=>'house',
             'ru'=>'dom',
             'pl'=>'sklep'
